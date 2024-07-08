@@ -4,11 +4,11 @@
     align-items: center;
     padding-top: 1em;
 }
-.navList{
+/* .navList{
     display: flex;
     align-items: center;
     gap: 1.5em;
-}
+} */
 .nav_brand{
     color: var(--primaryColor);
 }
@@ -38,10 +38,13 @@
     width: 28px;
     height: 28px;
 }
-.link a{
+/* .link{
     color: #333;
     text-decoration: none;
 }
+.active{
+    color: var(--primaryColor);
+} */
 .cart{
     color: var(--primaryColor);
     font-size: 25px;

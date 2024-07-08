@@ -9,15 +9,15 @@ import { useNavigate } from "react-router-dom";
 import { cartContext, totalPrice } from "../../context/cartContext";
 import Total from "../Total";
 
-const CartComponent = ({show}) => {
+const CartComponent = () => {
   const { mediaWidth } = useContext(mediaContext);
-  const { cart } = useContext(cartContext)
-  const navigate = useNavigate()
+  const { cart } = useContext(cartContext);
+  const navigate = useNavigate();
   return (
     <div className={styles.container}>
       <div className={styles.nav}>
         <div className={styles.btn_cont}>
-          <button onClick={() => navigate('/')} className={styles.btn}>
+          <button onClick={() => navigate("/")} className={styles.btn}>
             <FaChevronLeft />
           </button>
           {mediaWidth >= 760 && <span>Continue shoping</span>}
@@ -41,7 +41,15 @@ const CartComponent = ({show}) => {
           </button>
         )}
         {mediaWidth <= 960 && (
-          <button onClick={() => show()} className={styles.proceedBtn}>Proceed to Checkout</button>
+          <button
+            onClick={() => navigate("/payment")}
+            disabled={cart.length > 0 ? false : true}
+            className={`${cart.length > 0 ? "" : styles.disabled} ${
+              styles.proceedBtn
+            }`}
+          >
+            Proceed to Checkout
+          </button>
         )}
       </div>
     </div>

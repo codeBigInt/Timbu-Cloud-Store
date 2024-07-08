@@ -83,6 +83,10 @@
     border-radius: 12px;
     margin: 1em 0;
 }
+.disabled{
+    background: var(--grey);
+}
+
 
 @media screen and (max-width: 480px) {
     .wrapper{

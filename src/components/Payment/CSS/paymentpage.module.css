@@ -104,7 +104,10 @@ label{
     font-size: 18px;
     border-radius: 15px;
 }
-
+.invalid{
+    background: var(--grey);
+    color: #a9a9a9;
+}
 @media screen and (max-width: 480px) {
     .card_cont{
         width: 100%;
