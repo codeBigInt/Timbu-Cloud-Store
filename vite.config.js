@@ -7,9 +7,6 @@ import reactPlugin from 'vite-plugin-react'
 const config = {
   jsx: 'react',
   plugins: [reactPlugin],
-  build: {
-    outDir: 'dist'  // This should be 'dist' by default
-  }
 }
 
 export default config
